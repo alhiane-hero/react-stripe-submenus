@@ -1,0 +1,84 @@
+:root {
+    --whiteColor: #fff;
+    --blackColor: #111;
+    --mainColor: #fff;
+}
+
+nav {
+    position: relative;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    z-index: 1;
+}
+
+nav .navCenter {
+    width: 90vw;
+}
+
+nav .navCenter header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .navCenter header .toggleMenu {
+    padding: .40rem .75rem;
+    border-radius: .3rem;
+    background-color: var(--blackColor);
+    border: none;
+    font-size: 1.25rem;
+    color: var(--whiteColor);
+    cursor: pointer;
+}
+
+nav .navCenter .body,
+nav .navCenter footer {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    nav .navCenter {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+    }
+    nav .navCenter header .toggleMenu {
+        display: none;
+    }
+    nav .navCenter .body,
+    nav .navCenter .body .navLinks,
+    nav .navCenter .body .navLinks li,
+    nav .navCenter .body .navLinks li button {
+        height: 100%;
+    }
+    nav .navCenter .body,
+    nav .navCenter footer {
+        display: block;
+    }
+    nav .navCenter .body .navLinks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .navCenter .body .navLinks li .link-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        width: 10rem;
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        color: var(--blackColor);
+    }
+    nav .navCenter footer .signin-btn {
+        background-color: var(--blackColor);
+        border-radius: .3rem;
+        border: none;
+        padding: .5rem 1rem;
+        font-weight: 500;
+        color: var(--whiteColor);
+        cursor: pointer;
+    }
+}

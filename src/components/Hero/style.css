@@ -1,0 +1,69 @@
+:root {
+    --whiteColor: #fff;
+    --blackColor: #111;
+    --radius: .3rem;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    margin-top: -5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    top: 0;
+    left: 0;
+    background: url(../../img/hero.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.hero .heroCenter {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.hero .heroCenter .heroInfo h1 {
+    font-size: 3rem;
+    max-width: 35rem;
+    margin-bottom: 2rem;
+}
+
+.hero .heroCenter .heroInfo p {
+    font-size: 1.25rem;
+    color: #617d98;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 35rem;
+}
+
+.Btn {
+    padding: .5rem 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--radius);
+    background-color: var(--blackColor);
+    font-weight: 600;
+    color: var(--whiteColor);
+}
+
+.hero .heroCenter .heroImages {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .hero .heroCenter .heroImages {
+        display: block;
+    }
+}
